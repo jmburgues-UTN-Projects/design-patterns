@@ -18,11 +18,7 @@ public class BancoNostrumIml implements BancoNostrum {
 
 	@Override
 	public Integer estado(String cliente) {
-		Integer estadoActual = baseDatosClientes.get(cliente);
-		if(estadoActual == null){
-			estadoActual = 0;
-		}
-		return estadoActual;
+		return baseDatosClientes.get(cliente);
 	}
 
 }

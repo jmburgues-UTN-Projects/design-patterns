@@ -12,6 +12,7 @@ public class IMOAdapter implements InternationalMoneyOrganization {
     }
 
     @Override public int state(String cliente) {
-        return this.bancoNostrumIml.estado(cliente);
+        Integer state = this.bancoNostrumIml.estado(cliente);
+        return state == null ? 0 : state;
     }
 }
